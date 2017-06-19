@@ -14,7 +14,7 @@
             $http.get('/getkey')
             // handle success
                 .then(function (key) {
-                    console.log(key.data.token);
+                    //console.log(key.data.token);
                     BotChat.App({
                         directLine: { secret: key.data.token },
                         user: { id: 'webuser' },
