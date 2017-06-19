@@ -1,4 +1,4 @@
-Simple WebChat for BotFramework - Using Node/Angular
+<h1>Simple WebChat for BotFramework - Using Node/Angular</h1>
 
 Steps to Use : 
 1. Clone the branch to the local drive
