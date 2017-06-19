@@ -21,7 +21,7 @@ app.post('/getkey', function (req, res) {
 })
 
 app.get('/getkey', function (req, res){
-    var appSecret = 'emcQxQHdqlQ.cwA.EMw.gnW_aS8j108N38zNZY2y2ezuEI9LiOoVWHlujG25iDk';
+    var appSecret = 'app-secret-here'; //copy your app secret here
     var endPoint = 'https://directline.botframework.com/v3/directline/tokens/generate';
     var auth = 'Bearer';
 
