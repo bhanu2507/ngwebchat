@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://unpkg.com/botframework-webchat/botchat.css" rel="stylesheet" />
+</head>
+<body ng-app="webchat" ng-controller="chat">
+<div id="bot"/>
+<script src="https://unpkg.com/botframework-webchat/botchat.js"></script>
+</body>
+<script src="scripts/angular/angular.js"></script>
+<script>
+    angular.module('webchat', [])
+        .controller('chat', function($scope, $http) {
+            $http.get('/getkey')
+            // handle success
+                .then(function (key) {
+                    console.log(key.data.token);
+                    BotChat.App({
+                        directLine: { secret: key.data.token },
+                        user: { id: 'webuser' },
+                        bot: { id: 'botchallengein' },
+                        resize: 'detect'
+                    }, document.getElementById("bot"));
+                }, function (data) {
+                    console.log(data);
+                });
+
+        });
+</script>
+</html>
